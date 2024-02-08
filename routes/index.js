@@ -10,7 +10,7 @@ router.use('/api', apiRoutes);
 // Define a catch-all route for handling 404 (Not Found) errors
 router.use((req, res) => {
     // Respond with a 404 status code and a simple error message
-    return res.status(404).send('Not found');
+    return res.status(404).send('Wrong Route!');
 });
 
 // Export the configured router to be used in other parts of the application

@@ -1,5 +1,5 @@
 // Importing the required dependencies from the mongoose library
-const { Schema, model, Types } = require('mongoose'); 
+const { Schema, model } = require('mongoose'); 
 const validator = require('validator'); // Import the validator library
 
 // Defining the User schema with the required fields and their respective data types
