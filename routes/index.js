@@ -1,0 +1,17 @@
+// Import the necessary modules and create an Express Router instance
+const router = require('express').Router(); 
+
+// Import the API routes from the 'api-routes.js' file
+const apiRoutes = require('./api-routes');
+
+// Mount the 'apiRoutes' under the '/api' endpoint
+router.use('/api', apiRoutes);
+
+// Define a catch-all route for handling 404 (Not Found) errors
+router.use((req, res) => {
+    // Respond with a 404 status code and a simple error message
+    return res.status(404).send('Not found');
+});
+
+// Export the configured router to be used in other parts of the application
+module.exports = router;
