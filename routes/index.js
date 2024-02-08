@@ -1,8 +1,8 @@
 // Import the necessary modules and create an Express Router instance
 const router = require('express').Router(); 
 
-// Import the API routes from the 'api-routes.js' file
-const apiRoutes = require('./api-routes');
+// Import the API routes
+const apiRoutes = require('./api');
 
 // Mount the 'apiRoutes' under the '/api' endpoint
 router.use('/api', apiRoutes);

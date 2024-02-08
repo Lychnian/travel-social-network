@@ -1,6 +1,5 @@
 // Import necessary models and dependencies
-const { Thought, User, Reaction } = require('../models');
-const { Types } = require('mongoose');
+const { Thought, User } = require('../models');
 
 // Define the ThoughtController object, which contains methods for handling various API requests related to thoughts
 const ThoughtController = {
@@ -17,7 +16,7 @@ const ThoughtController = {
   },
 
   // Handler for the "get thought by ID" API endpoint
-  async getThoughtsById(req, res) {
+  async getThoughtById(req, res) {
     try {
       // Find a thought by its unique ID
       const thought = await Thought.findOne({ _id: req.params.thoughtId });
