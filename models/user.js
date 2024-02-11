@@ -18,12 +18,10 @@ const userSchema = new Schema(
       type: String,     // Data type: String
       required: true,   // Field is required
       unique: true,     // Field must be unique
-      validate: { 
-        // Use validator.js's email validation method
-        validator: validator.isEmail,  
-        // Custom error message if email validation fails
-        message: 'Invalid email address',
-      },
+      match: [          // Match for the email field: The regex pattern checks for a valid email address format.
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+        "Please use a valid email address",
+      ],
     },
 
     // Define the 'friends' field as an array of ObjectIds referencing the 'User' model
@@ -52,7 +50,7 @@ const userSchema = new Schema(
 );
 
 // Defining a virtual property 'friendCount' which returns the number of friends in the friends array
-userSchema.virtual('friendCount').get(function(){
+userSchema.virtual('friendCount').get(function (){
   return this.friends.length;
 });
 

@@ -7,7 +7,7 @@ const {
   updateUserById,
   deleteUserById,
   addFriend,
-  removeFriend,
+  deleteFriend,
 //   checkFriendRemoved,
 } = require('../../controllers/user-controller');
 
@@ -18,6 +18,6 @@ router.route('/').get(getAllUsers).post(createUser);
 router.route('/:userId').get(getUserById).put(updateUserById).delete(deleteUserById);
 
 // POST add friend and DELETE remove Friend
-router.route('/:userId/friends/:friendId').post(addFriend).delete(removeFriend);
+router.route('/:userId/friends/:friendId').post(addFriend).delete(deleteFriend);
 // Export the router
 module.exports = router;
