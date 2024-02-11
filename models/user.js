@@ -1,6 +1,5 @@
 // Importing the required dependencies from the mongoose library
 const { Schema, model } = require('mongoose'); 
-const validator = require('validator'); // Import the validator library
 
 // Defining the User schema with the required fields and their respective data types
 const userSchema = new Schema(
@@ -50,7 +49,7 @@ const userSchema = new Schema(
 );
 
 // Defining a virtual property 'friendCount' which returns the number of friends in the friends array
-userSchema.virtual('friendCount').get(function (){
+userSchema.virtual('friendCount').get(function(){
   return this.friends.length;
 });
 
