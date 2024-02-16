@@ -1,7 +1,6 @@
 // Import necessary models and dependencies
 const { Thought, User } = require('../models');
 
-
 // Define the ThoughtController object, which contains methods for handling various API requests related to thoughts
 const ThoughtController = {
   // Handler for the "get all thoughts" API endpoint
@@ -20,7 +19,7 @@ const ThoughtController = {
   async getThoughtById(req, res) {
     try {
       // Find a thought by its unique ID
-      const thought = await Thought.findOne({ _id: req.params.thoughtId });
+      const thought = await Thought.findById({ _id: req.params.thoughtId });
       if (!thought) {
         // If no thought is found with the specified ID, return a 404 response
         res.status(404).json({ message: 'No Thought found with that ID' });
@@ -47,10 +46,10 @@ const ThoughtController = {
         { new: true }
       );
 
-    // If the associated user is not found, return a 404 response
-    if (!updatedUser) {
-      return res.status(404).json({ message: 'User not found' });
-    }
+      // If the associated user is not found, return a 404 response
+      if (!updatedUser) {
+        return res.status(404).json({ message: 'User not found' });
+      }
 
       // Return the created thought
       res.status(201).json(thought);
@@ -72,31 +71,31 @@ const ThoughtController = {
     }
   },
 
-  // Handler for the "update thought by ID" API endpoint
-  async updateThoughtById(req, res) {
-    try {
-      // Find and update a thought by its ID with the provided request body data
-      const thought = await Thought.findByIdAndUpdate(req.params.thoughtId, req.body, {
-        new: true,
-      });
-      if (!thought) {
-        // If no thought is found with the specified ID, return a 404 response
-        res.status(404).json({ message: 'No thought found with that ID' });
-      } else {
-        // Return the updated thought
-        res.json(thought);
+    // Handler for the "update thought by ID" API endpoint
+    async updateThoughtById(req, res) {
+      try {
+        // Find and update a thought by its ID with the provided request body data
+        const thought = await Thought.findByIdAndUpdate(req.params.thoughtId, req.body, {
+          new: true,
+        });
+        if (!thought) {
+          // If no thought is found with the specified ID, return a 404 response
+          res.status(404).json({ message: 'No thought found with that ID' });
+        } else {
+          // Return the updated thought
+          res.json(thought);
+        }
+      } catch (err) {
+        // Handle server error and return a 500 status code with the error message
+        res.status(500).json(err);
       }
-    } catch (err) {
-      // Handle server error and return a 500 status code with the error message
-      res.status(500).json(err);
-    }
-  },
-
-  // Handler for the "create reaction" API endpoint
+    },
+  
+     // Handler for the "create reaction" API endpoint
   async createReaction(req, res) {
     try {
       // Find a thought by ID and add a reaction to its reactions array
-      const thought = await Thought.findOneAndUpdate(
+      const thought = await Thought.findByIdAndUpdate(
         { _id: req.params.thoughtId },
         { $addToSet: { reactions: req.body } },
         { runValidators: true, new: true }
@@ -113,7 +112,7 @@ const ThoughtController = {
   async deleteReaction(req, res) {
     try {
       // Find a thought by ID and remove a reaction from its reactions array
-      const thought = await Thought.findOneAndUpdate(
+      const thought = await Thought.findByIdAndUpdate(
         { _id: req.params.thoughtId },
         { $pull: { reactions: { reactionId: req.params.reactionId } } },
         { runValidators: true, new: true }

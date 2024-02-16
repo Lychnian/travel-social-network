@@ -1,7 +1,7 @@
 const { User } = require('../models');
 
 const UserController = {
-   getAllUsers(req, res) {
+  getAllUsers(req, res) {
     // Retrieve all users from the database
     User.find({})
       .then(userData => res.json(userData))
@@ -24,7 +24,7 @@ const UserController = {
 
   updateUserById(req, res) {
     // Find and update a user's information by their ID
-    User.findOneAndUpdate(req.params.id, req.body, { new: true })
+    User.findByIdAndUpdate(req.params.userId, req.body, { new: true })
       .then(userData => {
         if (!userData) {
           // If the user is not found, return a 404 response
@@ -38,7 +38,7 @@ const UserController = {
 
   deleteUserById(req, res) {
     // Find and delete a user by their ID
-    User.findOneAndDelete(req.params.id)
+    User.findByIdAndDelete(req.params.userId)
       .then(userData => {
         if (!userData) {
           // If the user is not found, return a 404 response
@@ -52,7 +52,7 @@ const UserController = {
 
   addFriend(req, res) {
     // Find the user by ID and add a friend to their friend list
-    User.findOneAndUpdate(
+    User.findByIdAndUpdate(
       { _id: req.params.userId },
       { $addToSet: { friends: req.body.friendId || req.params.friendId } },
       { new: true }
@@ -70,7 +70,7 @@ const UserController = {
 
   removeFriend({ params }, res) {
     // Find the user by ID and remove a friend from their friend list
-    User.findOneAndUpdate(
+    User.findByIdAndUpdate(
       { _id: params.userId },
       { $pull: { friends: params.friendId } },
       { new: true }
