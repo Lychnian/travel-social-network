@@ -19,7 +19,7 @@ const ThoughtController = {
   async getThoughtById(req, res) {
     try {
       // Find a thought by its unique ID
-      const thought = await Thought.findById({ _id: req.params.thoughtId });
+      const thought = await Thought.findById(req.params.thoughtId);
       if (!thought) {
         // If no thought is found with the specified ID, return a 404 response
         res.status(404).json({ message: 'No Thought found with that ID' });
@@ -39,19 +39,17 @@ const ThoughtController = {
       // Create a new thought using the request body data
       const thought = await Thought.create(req.body);
 
-      // Update the associated user's thoughts array with the new thought's _id
-      const updatedUser = await User.findByIdAndUpdate(
-        req.body.userId,
+      // After creating the thought, push its _id to the associated user's thoughts array field
+      const user = await User.findByIdAndUpdate(
+        req.body.userId, // Providing userId in the request body
         { $push: { thoughts: thought._id } },
         { new: true }
       );
 
-      // If the associated user is not found, return a 404 response
-      if (!updatedUser) {
+      if (!user) {
         return res.status(404).json({ message: 'User not found' });
       }
 
-      // Return the created thought
       res.status(201).json(thought);
     } catch (err) {
       // Handle server error and return a 500 status code with the error message
@@ -63,7 +61,10 @@ const ThoughtController = {
   async deleteThought(req, res) {
     try {
       // Find and delete a thought by its ID
-      const thought = await Thought.findByIdAndDelete({ _id: req.params.thoughtId });
+      const thought = await Thought.findByIdAndDelete(req.params.thoughtId);
+      if (!thought) {
+        return res.status(404).json({ message: 'Thought not found' });
+      }
       res.status(200).json(thought);
     } catch (err) {
       // Handle server error and return a 500 status code with the error message
@@ -91,7 +92,7 @@ const ThoughtController = {
       }
     },
   
-     // Handler for the "create reaction" API endpoint
+  // Handler for the "create reaction" API endpoint
   async createReaction(req, res) {
     try {
       // Find a thought by ID and add a reaction to its reactions array

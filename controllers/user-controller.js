@@ -1,4 +1,5 @@
 const { User } = require('../models');
+const { Thought } = require('../models');
 
 const UserController = {
   getAllUsers(req, res) {
@@ -36,20 +37,25 @@ const UserController = {
       .catch(err => res.status(500).json(err));
   },
 
-  deleteUserById(req, res) {
-    // Find and delete a user by their ID
-    User.findByIdAndDelete(req.params.userId)
-      .then(userData => {
-        if (!userData) {
-          // If the user is not found, return a 404 response
-          return res.status(404).json({ message: 'User not found with this ID!' });
-        }
-        // Return a success message after deleting the user
-        res.json({ message: 'User deleted successfully!' });
-      })
-      .catch(err => res.status(500).json(err));
+  async deleteUserById(req, res) {
+    try {
+      // Find and remove the user by ID
+      const user = await User.findOneAndDelete({ _id: req.params.userId });
+  
+      if (!user) {
+        return res.status(404).json({ message: 'No such user exists' });
+      }
+  
+      // Remove all thoughts owned by the deleted user
+      await Thought.deleteMany({ user: req.params.userId });
+  
+      res.json({ message: 'User and associated thoughts successfully deleted' });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
   },
-
+ 
   addFriend(req, res) {
     // Find the user by ID and add a friend to their friend list
     User.findByIdAndUpdate(
