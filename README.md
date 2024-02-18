@@ -1,10 +1,8 @@
 # Travel Social Network
 
 
-
 ## Badges
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-
 
 
 ## Table of Contents
@@ -13,12 +11,11 @@
 * [Technologies Used](#technology)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Tests](#tests)
 * [Demo](#demo)
 * [Screenshots](#screenshots)
 * [How to Contribute](#how-to-contribute)
-* [Tests](#tests)
 * [Questions?](#questions)
-
 
 
 ## License
@@ -26,11 +23,9 @@ This project is licensed under the MIT license.
 [License Link](https://opensource.org/licenses/MIT)
 
 
-
 ## Description
  
 The NoSQL Social Networking Project, specifically the Travel Social Network, is a dynamic web application that offers a unique spin on traditional social networks. Themed around travel and exploration, users from different countries can connect, share their thoughts and experiences, react to each other's posts, and make new friends. Powered by Mongoose, Express, and Node.js, this project leverages the flexibility and scalability of MongoDB, a NoSQL database, to provide a seamless user experience. With features such as CRUD operations for users and their shared thoughts, as well as the ability to post and delete reactions to thoughts and friendships, the Travel Social Network fosters a vibrant community of global travelers and adventurers.
-
 
 
 ## Technologies Used
@@ -45,7 +40,6 @@ The technologies used in this project include:
 - MongoDB Compass
 
 
-
 ## Usage
    
 To use the Travel Social Network:
@@ -56,29 +50,18 @@ To use the Travel Social Network:
 5. Use Postman or a similar tool to interact with the API endpoints and explore the features of the Travel Social Network.
 
 
-
 ## Tests
 
 ### Postman API Testing
 To ensure the functionality of the routes and endpoints in the Travel Social Network, various tests were conducted using Postman. Below are the test scenarios and instructions on how to run them:
 
-### Testing Endpoints
+#### Running the Tests
+1. Open Postman and import the collection containing the API requests.
+2. Run each request in the collection, ensuring that the responses match the expected outcomes.
+3. Verify that the CRUD operations for users and thoughts, as well as reactions and friendship requests, are functioning as expected.
+4. Monitor the responses and status codes to identify any errors or unexpected behavior.
 
-#### Get All Users
-To test the endpoint for getting all users, follow these steps:
-1. Start the server by running `node server`.
-2. Open Postman or a similar tool.
-3. Send a GET request to the following endpoint: `http://localhost:3001/api/users`.
-4. Verify that the response includes a list of all users.
-
-#### Get All Thoughts
-To test the endpoint for getting all thoughts, follow these steps:
-1. Start the server by running `node server`.
-2. Open Postman or a similar tool.
-3. Send a GET request to the following endpoint: `http://localhost:3001/api/thoughts`.
-4. Verify that the response includes a list of all thoughts.
-
-#### Testing CRUD Operations for Users and Thoughts
+#### Testing CRUD Operations for Users and Thoughts using the following API Requests:
 1. **Create User**: Sent POST requests to the `/api/users` endpoint with the required fields (e.g., username, email) to create new users.
 2. **Retrieve Users**: Sent GET requests to the `/api/users` endpoint to retrieve all users from the database.
 3. **Update User**: Sent PUT requests to the `/api/users/:userId` endpoint with the updated user information to update existing users.
@@ -88,20 +71,14 @@ To test the endpoint for getting all thoughts, follow these steps:
 7. **Update Thought**: Sent PUT requests to the `/api/thoughts/:thoughtId` endpoint with the updated thought information to update existing thoughts.
 8. **Delete Thought**: Sent DELETE requests to the `/api/thoughts/:thoughtId` endpoint to delete thoughts by their unique ID.
 
-#### Testing Reactions to Thoughts and Friendship Requests
+#### Testing Reactions to Thoughts and Friendship  using the following API Requests:
 1. **Add Reaction**: Sent POST requests to the `/api/thoughts/:thoughtId/reactions` endpoint with the reaction data to add reactions to specific thoughts.
 2. **Delete Reaction**: Sent DELETE requests to the `/api/thoughts/:thoughtId/reactions/:reactionId` endpoint to delete reactions from thoughts.
 3. **Add Friend**: Sent POST requests to the `/api/users/:userId/friends/:friendId` endpoint to add friends between users.
 4. **Remove Friend**: Sent DELETE requests to the `/api/users/:userId/friends/:friendId` endpoint to remove friends from the user's friend list.
 
-#### Running the Tests
-1. Open Postman and import the collection containing the API requests.
-2. Run each request in the collection, ensuring that the responses match the expected outcomes.
-3. Verify that the CRUD operations for users and thoughts, as well as reactions and friendship requests, are functioning as expected.
-4. Monitor the responses and status codes to identify any errors or unexpected behavior.
 
 By performing these tests in Postman, the functionality and reliability of the Travel Social Network project's routes and endpoints were thoroughly evaluated.
-
 
 
 ## Demo
@@ -111,16 +88,15 @@ Watch my YouTube demo video to learn how to use API endpoints for performing CRU
 YouTube demo video: 
 
 
-
 ## Screenshots
-
 
 
 ## How to Contribute
 [Contributor Covenant](https://www.contributor-covenant.org/)  
    
-   
   
 ## Questions?
 ### Reach Me Here: 
 [Lychnian](https://github.com/Lychnian)
+
+
