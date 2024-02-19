@@ -92,6 +92,52 @@ https://www.youtube.com/watch?v=y2H0BBKE-DQ&t=220s
 ## Screenshots
 
 
+![TSN 3](https://github.com/Lychnian/travel-social-network/assets/140586279/b74021c0-b289-4f85-8b5f-d8b21e29d354)
+
+
+![TSN 7](https://github.com/Lychnian/travel-social-network/assets/140586279/a30f0ab7-068d-4bf7-8d3c-1824e4e67fb0)
+
+
+![TSN 8](https://github.com/Lychnian/travel-social-network/assets/140586279/2b98c060-0721-4367-a40f-f3c59d93151b)
+
+
+![TSN 9](https://github.com/Lychnian/travel-social-network/assets/140586279/3eba51b1-acaa-4ffd-82d0-bf01d2877db7)
+
+
+![TSN 10](https://github.com/Lychnian/travel-social-network/assets/140586279/2e99fa5f-6418-4f93-b79a-7f26940278c7)
+
+
+![TSN 11](https://github.com/Lychnian/travel-social-network/assets/140586279/5ee1d9cf-fed6-47f2-aa5e-366d505e8a78)
+
+
+![TSN 12](https://github.com/Lychnian/travel-social-network/assets/140586279/015438e6-541f-4dd2-a1f5-9cdddd79d230)
+
+
+![TSN 13](https://github.com/Lychnian/travel-social-network/assets/140586279/cc5a7d7a-3e60-466e-9001-806b7f1ab181)
+
+
+![TSN 14](https://github.com/Lychnian/travel-social-network/assets/140586279/30a3973d-586c-4a97-ad69-fe24c224afe7)
+
+
+![TSN15](https://github.com/Lychnian/travel-social-network/assets/140586279/578576bc-129b-4f9c-a933-0f6487416cf8)
+
+
+![TSN 16](https://github.com/Lychnian/travel-social-network/assets/140586279/ed02b732-7dc6-474f-9e8a-b6490d42147b)
+
+
+![TSN 17](https://github.com/Lychnian/travel-social-network/assets/140586279/4fc49f45-c220-4861-8568-c7cc3317d90b)
+
+
+![TSN 18](https://github.com/Lychnian/travel-social-network/assets/140586279/c8ffcee8-a880-467e-bd8d-df91471e8fe6)
+
+
+![TSN 19](https://github.com/Lychnian/travel-social-network/assets/140586279/07813946-e12f-4eb2-9d12-84939480abb9)
+
+
+![TSN 20](https://github.com/Lychnian/travel-social-network/assets/140586279/977bfaaf-3d4b-483e-83a0-f415951307e8)
+
+
+
 ## How to Contribute
 [Contributor Covenant](https://www.contributor-covenant.org/)  
    
