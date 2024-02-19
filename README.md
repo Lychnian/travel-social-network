@@ -25,7 +25,7 @@ This project is licensed under the MIT license.
 
 ## Description
  
-The NoSQL Social Networking Project, specifically the Travel Social Network, is a dynamic web application that offers a unique spin on traditional social networks. Themed around travel and exploration, users from different countries can connect, share their thoughts and experiences, react to each other's posts, and make new friends. Powered by Mongoose, Express, and Node.js, this project leverages the flexibility and scalability of MongoDB, a NoSQL database, to provide a seamless user experience. With features such as CRUD operations for users and their shared thoughts, as well as the ability to post and delete reactions to thoughts and friendships, the Travel Social Network fosters a vibrant community of global travelers and adventurers.
+The NoSQL Social Networking API Project, specifically the Travel Social Network, is a dynamic web application that offers a unique spin on traditional social networks. Themed around travel and exploration, users from different countries can connect, share their thoughts and experiences, react to each other's posts, and make new friends. Powered by Mongoose, Express, and Node.js, this project leverages the flexibility and scalability of MongoDB, a NoSQL database, to provide a seamless user experience. With features such as CRUD operations for users and their shared thoughts, as well as the ability to post and delete reactions to thoughts and friendships, the Travel Social Network fosters a vibrant community of global travelers and adventurers.
 
 
 ## Technologies Used
