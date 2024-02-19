@@ -86,6 +86,7 @@ By performing these tests in Postman, the functionality and reliability of the T
 Watch my YouTube demo video to learn how to use API endpoints for performing CRUD operations, including creating, reading, updating, and deleting user profiles, thoughts, reactions, and friendships.
 
 YouTube demo video: 
+https://www.youtube.com/watch?v=y2H0BBKE-DQ&t=220s
 
 
 ## Screenshots
@@ -98,5 +99,7 @@ YouTube demo video:
 ## Questions?
 ### Reach Me Here: 
 [Lychnian](https://github.com/Lychnian)
+
+Travel Social Network Repository: 
 
 
