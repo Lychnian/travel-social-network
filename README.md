@@ -1,4 +1,5 @@
 # Travel Social Network
+The Travel Social Network is powered by a robust backend API built with Node.js, Express, and MongoDB, making it a versatile and powerful platform for social networking. Utilizing the NoSQL database MongoDB, the API efficiently stores and retrieves user data, thoughts, reactions, and friendship connections. 
 
 
 ## Badges
