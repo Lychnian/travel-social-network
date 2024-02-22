@@ -9,7 +9,7 @@
 * [License](#license)
 * [Description](#description)
 * [Technologies Used](#technology)
-* [Installation and Usage](#installation and Usage)
+* [Installation and Usage](#installation-and-usage)
 * [Tests](#tests)
 * [Demo](#demo)
 * [Screenshots](#screenshots)
@@ -39,9 +39,9 @@ The technologies used in this project include:
 - MongoDB Compass
 
 
-## Usage
+## Installation and Usage
    
-To use the Travel Social Network:
+To install and use the Travel Social Network:
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Install dependencies by running `npm install`.
