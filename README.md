@@ -1,4 +1,4 @@
-# Travel Social Network
+# TRAVEL SOCIAL NETWORK
 
 
 ## Badges
